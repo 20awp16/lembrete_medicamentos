@@ -36,7 +36,7 @@ def enviar_sms(numero, mensagem):
 
 @app.route('/')
 def index():
-    return "API de lembretes funcionando! 🚀"
+    return render_template('index.html')
 
 
 # ============================
