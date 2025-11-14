@@ -2,13 +2,14 @@ from flask import Flask, render_template, request, jsonify
 from datetime import datetime, timedelta
 from threading import Timer
 from twilio.rest import Client
+import os
 
 app = Flask(__name__)
 
-# Configurações do Twilio
-TWILIO_SID = "ACf6320b2a2b3016809dd3f5118019fc65"
-TWILIO_AUTH_TOKEN = "1c5147f1a377595bbbcf738aa991e47c"
-TWILIO_PHONE = "+1 814 992 4750"
+# Configurações do Twilio via variáveis de ambiente
+TWILIO_SID = os.environ.get"ACf6320b2a2b3016809dd3f5118019fc65"
+TWILIO_AUTH_TOKEN = os.environ.get"1c5147f1a377595bbbcf738aa991e47c"
+TWILIO_PHONE = os.environ.get"+18149924750"
 
 # Cria o cliente Twilio
 client = Client(TWILIO_SID, TWILIO_AUTH_TOKEN)
